@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button</title>
+    <style>
+        .redirect-button {
+            background-color: #ea8f10; /* Your preferred color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .redirect-button:hover {
+            background-color: #d87c0d; /* Slightly darker shade */
+        }
+    </style>
+</head>
+<body>
+    <button class="redirect-button" onclick="redirectToGmail()">Go to Gmail</button>
+
+    <script>
+        function redirectToGmail() {
+            window.location.href = "https://mail.google.com";
+        }
+    </script>
+</body>
+</html>

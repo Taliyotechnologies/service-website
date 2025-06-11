@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact....</title>
+</head>
+
+<link rel="icon" href="./myfab.jpg" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+
+
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+body{
+scroll-behavior: smooth;
+overflow-x: hidden;
+
+}
+
+.navigation {
+display: flex;
+background-color: #212421;
+color: white;
+width: 100%;
+position: relative; /* Ensure positioning for dropdown */
+}
+
+.navlogo {
+color: white;
+font-size: 2rem;
+margin-top: 2.8rem;
+margin-left: 5rem;
+margin-right: 1.5rem;
+font-weight: 400;
+font-family: serif;
+}
+
+.navankr {
+color: #8ca3a3;
+margin-left: 1.5rem;
+font-size: 0.9rem;
+text-decoration: none;
+font-family: sans-serif;
+position: relative;
+top: 7px;
+}
+
+.navankr:hover {
+color: white;
+}
+
+.navbtn {
+padding: 1.2rem 2.5rem;
+margin: 2rem 0rem 0.5rem 38rem;
+font-size: 1.1rem;
+border-radius: 0.5rem;
+border: none;
+background-color: #ea8f10;
+position: relative;
+right: 2rem;
+}
+
+.navbtn:hover {
+background-color: #d4963e;
+}
+
+/* Hamburger Menu */
+.hamburger {
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 25px;
+height: 20px;
+cursor: pointer;
+margin-top: 3rem;
+margin-left: auto; /* Align to the right */
+margin-right: 5rem;
+}
+
+.hamburger span {
+display: block;
+height: 3px;
+background-color: white;
+border-radius: 2px;
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #212421;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.navankr {
+  margin: 0;
+  text-align: center;
+}
+
+.navbtn {
+  margin: 10px 0 0;
+  text-align: center;
+  position: relative;
+  right: 0rem;
+}
+
+.hamburger {
+  display: flex;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+}
+
+
+
+/* ..................nav is end................ */
+
+
+/* ..................hend start................ */
+
+.headcontainer{
+background-color: #212421;
+width: 100%;
+height: 22rem;
+text-align: center;
+padding-top: 5rem;
+}
+.subpara{
+color: #EA8F10;
+font-size: 1.5rem;
+font-family: sans-serif;
+}
+.headname{
+font-size: 6rem;
+color: white;
+font-family: "DM Serif Display", serif;
+font-weight: 500;  
+}
+
+/* ..................head end................ */
+
+
+/* ..................top main start................ */
+
+.topmaincontainer{
+ display: flex;
+ width: 100%;
+ padding-top: 6rem;
+}
+.topheading{
+  font-size: 4.5rem;
+  width: 36rem;
+  margin-left: 5rem;
+  font-family: "DM Serif Display", serif;
+  color: #212421;
+  font-weight: 500;
+  line-height: 5rem;
+
+}
+.toppara{
+  font-size: 1.3rem;
+  width: 35rem;
+  margin-left: 5rem;
+  font-family: sans-serif;
+  line-height: 2.5rem;
+  color: #212421;
+}
+
+
+
+
+/* .................main start...................... */
+
+.maincontainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -4rem;
+}
+.contactheading{
+    font-size: 2.5rem;
+    font-family: "DM Serif Display", serif;
+    color: #212421;
+    font-weight: 500;
+    margin-left: 5rem;
+}
+.mainpara{
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: #212421;
+    font-weight: 500;
+    margin-left: 5rem;
+    width: 30rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+}
+.contactbtn{
+    padding: 1.5rem 9rem;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #EA8F10;
+    color: black;
+    font-family: sans-serif;
+}
+.content{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #212421;
+    margin-left: 5rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+.social-icons{
+    display: flex;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+.social-icons a{
+    color: #212421;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.subhead{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #212421;
+    margin-left: 5rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+}
+.email{
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: #212421;
+    margin-left: 5rem;
+    margin-top: 0.8rem;
+}
+.phonehead{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #212421;
+    margin-left: 5rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+}
+.phone{
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: #212421;
+    margin-left: 5rem;
+    margin-top: 0.8rem;
+}
+.container1{
+    width: 50%;
+    margin-left: 10rem;
+}
+.container2{
+    width:50%;
+
+}
+.imgcontactbox{
+    margin: 3rem 3rem;
+    width: 93%;
+    height: 25rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 5rem;
+
+}
+.imgcontact{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.email a{
+    color: #212421;
+    text-decoration: none;
+}
+.phone a{
+    color: #212421;
+    text-decoration: none;
+}
+.phone a:hover{
+    color: #EA8F10;
+}
+.email a:hover{
+    color: #EA8F10;
+}
+/* .................main start...................... */
+
+</style>
+
+<body>
+
+    <nav class="navigation" data-aos="fade-right" data-aos-delay="100">
+        <h1 class="navlogo">Harsh.</h1>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <a class="navankr" href="./portfolio.html">Home</a>
+          <a class="navankr" href="./About.html">About</a>
+          <a class="navankr" href="./service.html">Services</a>
+          <a class="navankr" href="./contact.html">Contact</a>
+          <button class="navbtn">Let's Work Together</button>
+        </div>
+      </nav>
+    
+      <!-- ..............nav end............. -->
+    
+    
+      <!-- ..............head start.......... -->
+    
+       <section class="headcontainer" data-aos="fade-left" data-aos-delay="100">
+    
+        <p class="subpara">Contact</p> 
+        <h1 class="headname">Get In Touch</h1>
+    
+       </section>
+    
+      <!--...............head end...........  -->
+    
+      <!-- ..............main start..........   -->
+    
+             <section>
+              <div class="topmaincontainer">
+                <h1 class="topheading" data-aos="fade-right" data-aos-delay="100">
+                    Let's take your business to the next level. 
+                </h1>
+                <p class="toppara" data-aos="fade-left" data-aos-delay="100">
+                    Let’s take your business to the next level with stunning designs, innovative solutions, and creative strategies! Whether it’s web development, graphic design, or digital marketing, I’m here to bring your vision to life. Let’s collaborate to create something extraordinary that sets you apart. Drop me a message, and let’s make it happen! 💼✨
+                </p>
+              </div>
+
+              </section>
+
+    <!--....................main end.............-->
+
+
+   
+
+    <!-- ...................main start............ -->
+     <div class="imgcontactbox">
+        <img src="./contact_upscayl_5x_ultrasharp.png" alt="img" class="imgcontact">
+     </div>
+      <section class="maincontainer">
+         <div class="container1">
+            <h1 class="contactheading">Let's Work Together</h1>
+            <p class="mainpara">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt quisquam voluptatibus debitis aperiam ratione. Officia, suscipit iure, tenetur eum consequatur, consequuntur omnis accusamus odit quod pariatur excepturi architecto veniam. Soluta modi dignissimos libero blanditiis at saepe doloribus temporibus illo facilis dolorem, aliquam obcaecati accusamus nihil laboriosam, esse vel. Quod, vitae.
+            </p>
+            <button class="contactbtn" onclick="window.location.href='mailto: harshbudhauliya882@gmail.com?subject=Inquiry&body=Hi, I would like to...'">
+                <i class="fa-regular fa-envelope"></i>
+                Send Me An Email
+            </button>
+         </div>
+         <div class="container2">
+            <p class="content">FOLLOW ON SOCIAL</p>
+
+            <div class="social-icons" data-aos="fade-right" data-aos-delay="200">
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+            <p class="subhead">FOR EMAIL</p>
+            <p class="email"><a href="mailto:your-email@example.com" >harshbudhauliya882@gmail.com</a></p>
+
+            <p class="phonehead">FOR PHONE</p>
+            <p class="phone"><a href="tel:+911234567890" >8929989312</a></p>
+        
+         </div>
+      </section>
+
+      <!-- ...................main end............ -->
+      
+
+
+</body>
+</html>

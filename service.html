@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service....</title>
+</head>
+
+<link rel="icon" href="./myfab.jpg" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+
+
+    *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+.navigation {
+    display: flex;
+    background-color: #212421;
+    color: white;
+    width: 100%;
+    position: relative; /* Ensure positioning for dropdown */
+  }
+  
+  .navlogo {
+    color: white;
+    font-size: 2rem;
+    margin-top: 2.8rem;
+    margin-left: 5rem;
+    margin-right: 1.5rem;
+    font-weight: 400;
+    font-family: serif;
+  }
+  
+  .navankr {
+    color: #8ca3a3;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-family: sans-serif;
+    position: relative;
+    top: 7px;
+  }
+  
+  .navankr:hover {
+    color: white;
+  }
+  
+  .navbtn {
+    padding: 1.2rem 2.5rem;
+    margin: 2rem 0rem 0.5rem 38rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #ea8f10;
+    position: relative;
+    right: 2rem;
+  }
+  .navbtn a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navbtn:hover {
+    background-color: #d4963e;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 3rem;
+    margin-left: auto; /* Align to the right */
+    margin-right: 5rem;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #212421;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .navankr {
+      margin: 0;
+      text-align: center;
+    }
+  
+    .navbtn {
+      margin: 10px 0 0;
+      text-align: center;
+      position: relative;
+      right: 0rem;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+
+
+
+/* ..................nav is end................ */
+
+
+/* ..................hend start................ */
+
+.headcontainer{
+    background-color: #212421;
+    width: 100%;
+    height: 22rem;
+    text-align: center;
+    padding-top: 5rem;
+}
+.subpara{
+    color: #EA8F10;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+.headname{
+    font-size: 6rem;
+    color: white;
+    font-family: "DM Serif Display", serif;
+    font-weight: 500;  
+}
+
+/* ..................head end................ */
+
+
+/* ..................top main start................ */
+
+   .topmaincontainer{
+     display: flex;
+     width: 100%;
+     padding-top: 6rem;
+}
+    .topheading{
+      font-size: 4.5rem;
+      width: 36rem;
+      margin-left: 5rem;
+      font-family: "DM Serif Display", serif;
+      color: #212421;
+      font-weight: 500;
+      line-height: 5rem;
+
+}
+    .toppara{
+      font-size: 1.3rem;
+      width: 35rem;
+      margin-left: 5rem;
+      font-family: sans-serif;
+      line-height: 2.5rem;
+      color: #212421;
+}
+
+
+
+
+/* ............card start............... */
+
+
+.cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2rem;
+        padding-top: 6rem;
+    }
+
+    .card {
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+        padding: 1.5rem;
+        width: 30%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+        color: #212421;
+        margin-bottom: 1rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    .card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .card ul li {
+        font-size: 1rem;
+        color: #777;
+        margin-bottom: 0.5rem;
+    }
+
+/* ,,,,,,,,,,,,card end................. */
+
+
+
+
+
+
+/* ..............question start.......... */
+.interactive-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #212421;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+    background-color: #ea8f10;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #d4963e;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+    padding: 0 1rem;
+}
+
+.faq-answer.active {
+    max-height: 200px;
+    padding: 1rem;
+}
+
+/* ..............question end.......... */
+
+
+
+
+/* .........................fotter start........................ */
+
+/* ....................fotter start........................... */
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  background: #212421;
+  position: relative;
+  padding-top: 7rem ;
+  padding-bottom: 7rem ;
+  border-top: 1px solid #3b3b3b;
+}
+
+.about-section {
+  width: 40%;
+  margin-left: 2rem;
+}
+
+.about-section h2 {
+  margin-bottom: 10px;
+  color: #fef6e6;
+  font-size: 2rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  
+}
+
+.about-section p {
+  line-height: 1.6;
+  font-size: 1.3rem;
+  color: #ffffff99;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 100px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.projects-section {
+  width: 40%;
+  margin-left: -10rem;
+}
+
+.projects-section h2 {
+  margin-bottom: 17px;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "DM Serif Display", serif;
+}
+
+.projects-section a {
+  display: block;
+  margin: 10px 0;
+  color: #ff8a00;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-size: 1.3rem;
+  color: #ffffff99;
+}
+
+.projects-section a:hover {
+  color: white;
+}
+
+.contact-section {
+  width: 25%;
+  margin-left: -30rem;
+}
+
+.contact-section h2 {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "DM Serif Display", serif;
+}
+.contact-section p{
+  width: 16rem;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #ffffff99;
+}
+
+.contact-section input {
+  margin-bottom: 15px;
+  padding: 25px 35px;
+  border: none;
+  border-radius: 5px;
+  background: #2b2c2c;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+.contact-section button {
+  background-color: #ea8f10;
+  border: none;
+  border-radius: 5px;
+  padding: 25px 83px;
+  color: #212421;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  font-weight: 600;
+}
+
+.contact-section button:hover {
+  transform: scale(1.1);
+}
+
+.contact-section button:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-section, .projects-section, .contact-section {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .social-icons {
+      justify-content: center;
+  }
+}
+
+
+/* .....................footer end............................ */
+
+/* .........................fotter end........................... */
+
+
+</style>
+<body>
+    <nav class="navigation" >
+        <h1 class="navlogo">Harsh.</h1>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <a class="navankr" href="./portfolio.html">Home</a>
+          <a class="navankr" href="./About.html">About</a>
+          <a class="navankr" href="./service.html">Services</a>
+          <a class="navankr" href="./contact.html">Contact</a>
+          <button class="navbtn"><a href="./contact.html">Let's Work Together</a></button>
+        </div>
+      </nav>
+    
+      <!-- ..............nav end............. -->
+    
+    
+      <!-- ..............head start.......... -->
+    
+       <section class="headcontainer">
+    
+        <p class="subpara">Services</p> 
+        <h1 class="headname">High-Impact Services</h1>
+    
+       </section>
+    
+      <!--...............head end...........  -->
+    
+      <!-- ..............main start..........   -->
+    
+             <section>
+              <div class="topmaincontainer">
+                <h1 class="topheading" data-aos="fade-right" data-aos-delay="100">
+                    High-impact services to help your business
+                </h1>
+                <p class="toppara" data-aos="fade-left" data-aos-delay="100">
+                  I am a passionate web designer and full-stack developer who believes in the power of creativity, dedication, and innovation. With every project, I strive to turn ideas into engaging, functional, and visually captivating designs. My journey is fueled by positivity and a constant hunger for growth. I embrace challenges as opportunities to learn and evolve, combining technical expertise with a creative vision to deliver impactful solutions.
+                </p>
+              </div>
+
+              </section>
+
+    <!--....................main end.............-->
+
+    <!-- ..............cards start.......... -->
+    <section class="cards-container">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <h2>Web Development</h2>
+            <p>We offer comprehensive web development services to build robust and scalable web applications. Our team ensures seamless integration and user-friendly interfaces.</p>
+            <ul>
+                <li>Responsive Design</li>
+                <li>Backend Development</li>
+                <li>API Integration</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <h2>UI/UX Design</h2>
+            <p>Our UI/UX design services focus on creating intuitive and engaging user experiences. We prioritize user-centric designs to enhance usability and satisfaction.</p>
+            <ul>
+                <li>User Research</li>
+                <li>Wireframing</li>
+                <li>Prototyping</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <h2>SEO Optimization</h2>
+            <p>Improve your website's visibility and ranking with our SEO optimization services. We implement effective strategies to drive organic traffic and boost online presence.</p>
+            <ul>
+                <li>Keyword Research</li>
+                <li>On-Page SEO</li>
+                <li>Link Building</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+            <h2>Content Creation</h2>
+            <p>Engage your audience with high-quality content creation services. We produce compelling content that resonates with your target audience and drives engagement.</p>
+            <ul>
+                <li>Blog Writing</li>
+                <li>Copywriting</li>
+                <li>Video Production</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="500">
+            <h2>Digital Marketing</h2>
+            <p>Our digital marketing services help you reach a wider audience and achieve your business goals. We create tailored strategies to maximize your online impact.</p>
+            <ul>
+                <li>Social Media Marketing</li>
+                <li>Email Campaigns</li>
+                <li>Pay-Per-Click Advertising</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="600">
+            <h2>E-commerce Solutions</h2>
+            <p>Boost your online sales with our e-commerce solutions. We develop secure and scalable e-commerce platforms that provide a seamless shopping experience.</p>
+            <ul>
+                <li>Store Setup</li>
+                <li>Payment Gateway Integration</li>
+                <li>Inventory Management</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="700">
+            <h2>Mobile App Development</h2>
+            <p>We offer end-to-end mobile app development services to create high-performance apps. Our team ensures a smooth user experience across all devices.</p>
+            <ul>
+                <li>iOS Development</li>
+                <li>Android Development</li>
+                <li>Cross-Platform Solutions</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="800">
+            <h2>Cloud Services</h2>
+            <p>Leverage the power of the cloud with our cloud services. We provide scalable and secure cloud solutions to enhance your business operations.</p>
+            <ul>
+                <li>Cloud Migration</li>
+                <li>Cloud Management</li>
+                <li>Cloud Security</li>
+            </ul>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="900">
+            <h2>IT Consulting</h2>
+            <p>Our IT consulting services help you navigate the complexities of technology. We provide expert guidance to optimize your IT infrastructure and strategy.</p>
+            <ul>
+                <li>Technology Assessment</li>
+                <li>IT Strategy</li>
+                <li>Project Management</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ..............cards end.......... -->
+
+<!-- ..............question start.......... -->
+<section class="interactive-section">
+    <div class="faq-container">
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">What services do you offer?</button>
+            <div class="faq-answer">
+                <p>We offer a wide range of services including web development, UI/UX design, SEO optimization, content creation, digital marketing, e-commerce solutions, mobile app development, cloud services, and IT consulting.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I contact you?</button>
+            <div class="faq-answer">
+                <p>You can contact us through the contact form on our website or by emailing us at contact@example.com.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What is your pricing model?</button>
+            <div class="faq-answer">
+                <p>Our pricing model varies depending on the scope and complexity of the project. Please contact us for a detailed quote.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ..............question end.......... -->
+
+
+   <!-- .................footer start.................. -->
+
+
+   <div class="footer">
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>About Harsh</h2>
+        <p data-aos="fade-right" data-aos-delay="200">
+            I am a passionate web designer with expertise in creating stunning and functional
+            websites. My goal is to blend aesthetics with usability to deliver the best user
+            experience. Let's collaborate and build something amazing together!
+        </p>
+        <!-- Social Icons -->
+        <div class="social-icons" data-aos="fade-right" data-aos-delay="200">
+            <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-section" data-aos="zoom-in" data-aos-delay="200">
+        <h2>My Projects</h2>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Project</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section" data-aos="fade-left" data-aos-delay="200">
+        <h2>Contact Me</h2>
+        <p>am a passionate web designer with expertise in creating stunning and functional
+          websites.</p>
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit">Submit Here</button>
+    </div>
+</div>
+
+
+
+
+    <!-- ................footer end.................... -->
+
+</body>
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqAnswer = button.nextElementSibling;
+            faqAnswer.classList.toggle('active');
+        });
+    });
+
+
+
+    AOS.init({
+    duration: 800, // Animation duration in milliseconds
+    easing: 'ease-in-out', // Easing function
+    once: true, // Whether animation should happen only once
+    mirror: false // Replay animation when scrolling back up
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</html>
+
